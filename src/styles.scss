@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optional: Custom scrollbar for that extra 'capstone' polish */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  @apply bg-slate-50 text-slate-900; /* This uses Tailwind inside your CSS! */
+}
