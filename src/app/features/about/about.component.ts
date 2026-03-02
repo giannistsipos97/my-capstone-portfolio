@@ -26,6 +26,7 @@ export class AboutComponent {
   education = [
     {
       year: '2015 - 2022',
+      type: 'BSc & MSc',
       degree: 'Information & Commmunication Systems Engineer',
       university: 'University Of The Aegean',
       desc: 'Studied Software Engineering with a focus on Object-Oriented Programming languages such as Java, C++, Python etc. Gained experience in web application development, database creation and management with SQL, as well as foundational knowledge in data mining, machine learning, management information systems, and project management.',
