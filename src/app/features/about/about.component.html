@@ -174,38 +174,64 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         @for (cert of certifications; track cert.title) {
-          <a
-            [href]="cert.link"
-            target="_blank"
-            class="group p-5 bg-slate-900/40 border border-slate-800 rounded-2xl hover:border-indigo-500 flex items-center gap-5"
-          >
-            <img
-              [src]="cert.image"
-              [alt]="cert.issuer"
-              class="flex-shrink-0 w-14 h-14 rounded-lg object-contain transition-transform duration-300 group-hover:scale-110"
-            />
-
-            <div>
-              <h3
-                class="text-white font-semibold group-hover:text-indigo-500 transition-colors line-clamp-1"
-              >
-                {{ cert.title }}
-              </h3>
-              <div class="flex items-center gap-2 mt-1">
-                <span class="text-slate-400 text-xs">{{ cert.issuer }}</span>
-              </div>
-            </div>
-
-            <div
-              class="ml-auto opacity-0 group-hover:opacity-100 transition-opacity"
+          @if (cert.link) {
+            <a
+              [href]="cert.link"
+              target="_blank"
+              class="group p-5 bg-slate-900/40 border border-slate-800 rounded-2xl hover:border-indigo-500 flex items-center gap-5 transition-all cursor-pointer"
             >
-              <i
-                class="fa-solid fa-arrow-up-right-from-square text-slate-600 text-xs"
-              ></i>
+              <ng-container
+                *ngTemplateOutlet="
+                  certContent;
+                  context: { $implicit: cert, hasLink: true }
+                "
+              ></ng-container>
+            </a>
+          } @else {
+            <div
+              class="group p-5 bg-slate-900/40 border border-slate-800 rounded-2xl hover:border-indigo-500 flex items-center gap-5 transition-all cursor-pointer"
+            >
+              <ng-container
+                *ngTemplateOutlet="
+                  certContent;
+                  context: { $implicit: cert, hasLink: false }
+                "
+              ></ng-container>
             </div>
-          </a>
+          }
         }
       </div>
+
+      <ng-template #certContent let-cert let-hasLink="hasLink">
+        <img
+          [src]="cert.image"
+          [alt]="cert.issuer"
+          class="flex-shrink-0 w-14 h-14 rounded-lg object-contain transition-transform duration-300"
+          [class.group-hover:scale-110]="hasLink"
+        />
+
+        <div>
+          <h3
+            class="text-white font-semibold transition-colors line-clamp-1"
+            [class.group-hover:text-indigo-500]="hasLink"
+          >
+            {{ cert.title }}
+          </h3>
+          <div class="flex items-center gap-2 mt-1">
+            <span class="text-slate-400 text-xs">{{ cert.issuer }}</span>
+          </div>
+        </div>
+
+        @if (hasLink) {
+          <div
+            class="ml-auto opacity-0 group-hover:opacity-100 transition-opacity"
+          >
+            <i
+              class="fa-solid fa-arrow-up-right-from-square text-slate-600 text-xs"
+            ></i>
+          </div>
+        }
+      </ng-template>
     </div>
   </div>
 </section>

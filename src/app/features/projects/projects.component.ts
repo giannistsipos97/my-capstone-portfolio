@@ -16,7 +16,7 @@ export class ProjectsComponent {
       status: 'development',
       image: 'images/background_image.png',
       tags: ['Angular', 'PrimeNG', 'Tailwind', 'Node.js', 'MongoDB'],
-      github: 'https://github.com/giannistsipos97/gametime-app.git', // Add your repo link
+      github: 'https://github.com/giannistsipos97/gametime-app.git',
     },
     {
       title: 'TrackingWallet',
@@ -25,7 +25,7 @@ export class ProjectsComponent {
       status: 'development',
       image: 'images/Wallet Background.jpg',
       tags: ['Angular', 'Tailwind', 'Node.js', 'MongoDB'],
-      github: 'https://github.com/giannistsipos97/WalletApp.git', // Add your repo link
+      github: 'https://github.com/giannistsipos97/WalletApp.git',
     },
   ];
 }
