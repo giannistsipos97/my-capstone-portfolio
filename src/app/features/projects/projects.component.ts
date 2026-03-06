@@ -18,5 +18,14 @@ export class ProjectsComponent {
       tags: ['Angular', 'PrimeNG', 'Tailwind', 'Node.js', 'MongoDB'],
       github: 'https://github.com/giannistsipos97/gametime-app.git', // Add your repo link
     },
+    {
+      title: 'TrackingWallet',
+      description:
+        'TrackingWallet is a personal finance-tracking web & mobile application that helps users manage their expenses and income. The app allows users to: Add transactions to their personal ledger Categorize transactions for better organization View detailed financial reports and insights.',
+      status: 'development',
+      image: 'images/Wallet Background.jpg',
+      tags: ['Angular', 'Tailwind', 'Node.js', 'MongoDB'],
+      github: 'https://github.com/giannistsipos97/WalletApp.git', // Add your repo link
+    },
   ];
 }
