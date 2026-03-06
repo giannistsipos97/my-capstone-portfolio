@@ -15,7 +15,7 @@ export class ProjectsComponent {
         'GameTime is a personal game-tracking web application that helps users organize their gaming backlog and monitor their progress across different games. The app allows users to: Add games to their personal library Track games as Currently Playing, Completed, or Unplayed View detailed game information and progress status.',
       status: 'development',
       image: 'images/background_image.png',
-      tags: ['Angular', 'PrimeNG', 'Tailwind', 'Node.js', 'PostgreSQL'],
+      tags: ['Angular', 'PrimeNG', 'Tailwind', 'Node.js', 'MongoDB'],
       github: 'https://github.com/giannistsipos97/gametime-app.git', // Add your repo link
     },
   ];
