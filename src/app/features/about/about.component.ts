@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './about.component.scss',
 })
 export class AboutComponent {
-  skills = [
+  technicalSkills = [
     'Angular',
     'TypeScript',
     'Javascript',
@@ -21,6 +21,20 @@ export class AboutComponent {
     'RxJs',
     'SQL',
     'Rest APIs',
+  ];
+
+  pmSkills = [
+    'Agile & Scrum fundamentals',
+    'Project Planning & Scheduling',
+    'Risk Management',
+    'Stakeholder Communication',
+  ];
+
+  pmtools = [
+    'Excel for Project Management',
+    'Notion',
+    'Trello',
+    'Ticketing systems',
   ];
 
   education = [
@@ -50,13 +64,13 @@ export class AboutComponent {
       role: 'Software Engineer',
       company: 'ORCO S.A',
       points: [
-        // Changed to an array
-        'Develop and maintain a complex hospital information system (HIS) using Angular and PrimeNg.',
-        'Create and enhance a web-based HR planning tool for hospital staff.',
-        'Collaborate with a cross-functional development team to troubleshoot and resolve issues.',
-        'Use Oracle SQL to locate, modify, and insert data in hospital-related schemas.',
-        'Use GitLab for version control, managing code through branching strategies.',
-        'Provide responsive technical support and assisted in resolving 100+ tickets.',
+        'DWorked on a hospital information system, building and improving features related to patient management, payroll, and bookings',
+        'Collaborated daily with other developers and team members to understand requirements and deliver new functionality',
+        'Handled and resolved 100+ support tickets, making sure issues were prioritized and communicated clearly with users',
+        'Took responsibility for specific parts of the system (like patient management and HR tools), helping coordinate fixes and improvements.',
+        'Contributed to the development of a leave management application from an early stage, gaining a better understanding of how projects evolve',
+        'Used Oracle SQL to investigate and fix data-related issues when needed',
+        'Worked with GitLab for version control and followed structured workflows when contributing code',
       ],
     },
   ];
@@ -82,6 +96,21 @@ export class AboutComponent {
       title: 'Grow Greek Tourism',
       issuer: 'Google',
       image: 'images/google-logo.png',
+    },
+    {
+      title: 'Project Management',
+      issuer: 'Workearly',
+      image: 'images/Workearly.png',
+      status: 'Completed',
+      link: 'https://www.credly.com/badges/f18b4f7b-02f0-4279-82b4-2bb10265b0f6/public_url',
+    },
+    {
+      title: 'Project Management & Administration Certification',
+      issuer: 'In progress (expected June 2026)',
+      icon: 'fa-solid fa-spinner',
+      // image: 'images/Workearly.png',
+      status: 'In progress(expected June 2026)',
+      // link: 'https://www.credly.com/badges/f18b4f7b-02f0-4279-82b4-2bb10265b0f6/public_url',
     },
   ];
 }

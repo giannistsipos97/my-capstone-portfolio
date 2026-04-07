@@ -8,30 +8,19 @@
 
       <div class="space-y-6">
         <p class="text-xl leading-relaxed text-slate-300">
-          Software Developer with hands-on experience in building web
-          applications using Angular. Skilled in front-end development,
-          component-based architecture, and data handling through Oracle SQL.
-          Strong collaborator in cross-functional teams, with a problem-solving
-          mindset and commitment to writing clean, maintainable code.
+          Front-end developer with 3 years of experience working on healthcare
+          applications. I’ve been part of a team building and supporting a
+          hospital information system, where I worked closely with developers,
+          analysts, and users to deliver features and fix issues.Through this
+          experience, I’ve been involved in task coordination, handling tickets,
+          and understanding business requirements, which got me interested in
+          project management. I’ve recently completed a Project Management
+          certification and I’m now looking to move into a Junior Project
+          Manager or similar role where I can combine my technical background
+          with project coordination.
         </p>
 
-        <div class="pt-4">
-          <h3
-            class="text-white font-semibold mb-4 uppercase tracking-wider text-sm"
-          >
-            Technical Skills
-          </h3>
-          <div class="flex flex-wrap gap-3">
-            @for (skill of skills; track skill) {
-              <span
-                class="px-4 py-2 bg-slate-900 border border-slate-800 rounded-lg text-indigo-400 font-medium hover:border-indigo-500 transition-colors"
-              >
-                {{ skill }}
-              </span>
-            }
-          </div>
-        </div>
-        <div class="max-w-4xl mx-auto mt-12">
+        <!-- <div class="max-w-4xl mx-auto mt-12">
           <div
             class="relative overflow-hidden bg-gradient-to-r from-indigo-900/40 to-slate-900/40 border border-indigo-500/30 rounded-2xl p-6 md:p-8 shadow-xl"
           >
@@ -75,11 +64,11 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 
-    <div class="mb-20">
+    <div class="mb-12">
       <div class="flex items-center gap-4 mb-10">
         <div class="p-3 bg-indigo-500/10 rounded-lg">
           <i class="fa-solid fa-briefcase text-indigo-500 text-xl"></i>
@@ -164,7 +153,57 @@
       </div>
     </div>
 
-    <div class="mt-20">
+    <div class="pt-4">
+      <h3
+        class="text-white font-semibold mb-4 uppercase tracking-wider text-sm"
+      >
+        Technical Skills
+      </h3>
+      <div class="flex flex-wrap gap-3">
+        @for (skill of technicalSkills; track skill) {
+          <span
+            class="px-4 py-2 bg-slate-900 border border-slate-800 rounded-lg text-indigo-400 font-medium hover:border-indigo-500 transition-colors"
+          >
+            {{ skill }}
+          </span>
+        }
+      </div>
+    </div>
+    <div class="pt-6">
+      <h3
+        class="text-white font-semibold mb-4 uppercase tracking-wider text-sm"
+      >
+        Project Management Skills
+      </h3>
+      <div class="flex flex-wrap gap-3">
+        @for (skill of pmSkills; track skill) {
+          <span
+            class="px-4 py-2 bg-slate-900 border border-slate-800 rounded-lg text-indigo-400 font-medium hover:border-indigo-500 transition-colors"
+          >
+            {{ skill }}
+          </span>
+        }
+      </div>
+    </div>
+
+    <div class="pt-6">
+      <h3
+        class="text-white font-semibold mb-4 uppercase tracking-wider text-sm"
+      >
+        Project Management Tools
+      </h3>
+      <div class="flex flex-wrap gap-3">
+        @for (tools of pmtools; track tools) {
+          <span
+            class="px-4 py-2 bg-slate-900 border border-slate-800 rounded-lg text-indigo-400 font-medium hover:border-indigo-500 transition-colors"
+          >
+            {{ tools }}
+          </span>
+        }
+      </div>
+    </div>
+
+    <div class="mt-14">
       <div class="flex items-center gap-4 mb-10">
         <div class="p-3 bg-amber-500/10 rounded-lg">
           <i class="fa-solid fa-certificate text-amber-500 text-xl"></i>
@@ -203,12 +242,21 @@
       </div>
 
       <ng-template #certContent let-cert let-hasLink="hasLink">
-        <img
-          [src]="cert.image"
-          [alt]="cert.issuer"
-          class="flex-shrink-0 w-14 h-14 rounded-lg object-contain transition-transform duration-300"
-          [class.group-hover:scale-110]="hasLink"
-        />
+        @if (cert.icon) {
+          <i
+            [class]="cert.icon"
+            class="text-4xl text-indigo-500 transition-transform duration-300"
+            [class.group-hover:scale-110]="hasLink"
+          >
+          </i>
+        } @else {
+          <img
+            [src]="cert.image"
+            [alt]="cert.issuer"
+            class="flex-shrink-0 w-14 h-14 rounded-lg object-contain transition-transform duration-300"
+            [class.group-hover:scale-110]="hasLink"
+          />
+        }
 
         <div>
           <h3
