@@ -64,7 +64,7 @@ export class AboutComponent {
       role: 'Software Engineer',
       company: 'ORCO S.A',
       points: [
-        'DWorked on a hospital information system, building and improving features related to patient management, payroll, and bookings',
+        'Worked on a hospital information system, building and improving features related to patient management, payroll, and bookings',
         'Collaborated daily with other developers and team members to understand requirements and deliver new functionality',
         'Handled and resolved 100+ support tickets, making sure issues were prioritized and communicated clearly with users',
         'Took responsibility for specific parts of the system (like patient management and HR tools), helping coordinate fixes and improvements.',
