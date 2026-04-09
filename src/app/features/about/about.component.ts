@@ -77,6 +77,13 @@ export class AboutComponent {
 
   certifications = [
     {
+      title: 'Project Management',
+      issuer: 'Workearly',
+      image: 'images/Workearly.png',
+      status: 'Completed',
+      link: 'https://www.credly.com/badges/f18b4f7b-02f0-4279-82b4-2bb10265b0f6/public_url',
+    },
+    {
       title: 'Certificate of English Proficiency - C2',
       issuer: 'Michigan State University',
       image: 'images/Michigan-State-university-logo.png',
@@ -88,21 +95,14 @@ export class AboutComponent {
       image: 'images/udemy-logo.png',
     },
     {
-      title: 'ECDL progress certificate',
-      issuer: 'ECDL foundation',
-      image: 'images/ecdl-logo.png',
-    },
-    {
       title: 'Grow Greek Tourism',
       issuer: 'Google',
       image: 'images/google-logo.png',
     },
     {
-      title: 'Project Management',
-      issuer: 'Workearly',
-      image: 'images/Workearly.png',
-      status: 'Completed',
-      link: 'https://www.credly.com/badges/f18b4f7b-02f0-4279-82b4-2bb10265b0f6/public_url',
+      title: 'ECDL progress certificate',
+      issuer: 'ECDL foundation',
+      image: 'images/ecdl-logo.png',
     },
     {
       title: 'Project Management & Administration Certification',
