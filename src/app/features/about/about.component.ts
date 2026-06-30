@@ -9,18 +9,23 @@ import { CommonModule } from '@angular/common';
   styleUrl: './about.component.scss',
 })
 export class AboutComponent {
-  technicalSkills = [
+  frontEndDevelopment = [
     'Angular',
     'TypeScript',
-    'Javascript',
+    'JavaScript (ES6+)',
     'Tailwind',
-    'Node.js',
-    'HTML',
+    'HTML5',
+    'CSS3',
     'Prime NG',
-    'Git',
     'RxJs',
-    'SQL',
-    'Rest APIs',
+  ];
+
+  apiintegration = [
+    'RESTful APIs',
+    'Node.js (Express)',
+    'Oracle SQL',
+    'MySQL',
+    'Postman',
   ];
 
   pmSkills = [
@@ -30,17 +35,23 @@ export class AboutComponent {
     'Stakeholder Communication',
   ];
 
-  pmtools = [
-    'Excel for Project Management',
+  testingTools = ['Unit Testing (Jasmine, Karma)', 'Git', 'GitHub'];
+
+  tools = [
+    'Microsoft Office',
     'Notion',
+    'Kanban boards',
     'Trello',
     'Ticketing systems',
+    'Postman',
+    'VS Code',
+    'IntelliJ IDEA',
   ];
 
   education = [
     {
       year: '2015 - 2022',
-      type: 'BSc & MSc',
+      type: 'MSc Diploma',
       degree: 'Information & Commmunication Systems Engineer',
       university: 'University Of The Aegean',
       desc: 'Studied Software Engineering with a focus on Object-Oriented Programming languages such as Java, C++, Python etc. Gained experience in web application development, database creation and management with SQL, as well as foundational knowledge in data mining, machine learning, management information systems, and project management.',
@@ -61,16 +72,15 @@ export class AboutComponent {
     },
     {
       year: 'September 2022 - October 2025',
-      role: 'Software Engineer',
+      role: 'Software Engineer | IT Tech Consultant',
       company: 'ORCO S.A',
       points: [
-        'Worked on a hospital information system, building and improving features related to patient management, payroll, and bookings',
-        'Collaborated daily with other developers and team members to understand requirements and deliver new functionality',
-        'Handled and resolved 100+ support tickets, making sure issues were prioritized and communicated clearly with users',
-        'Took responsibility for specific parts of the system (like patient management and HR tools), helping coordinate fixes and improvements.',
-        'Contributed to the development of a leave management application from an early stage, gaining a better understanding of how projects evolve',
-        'Used Oracle SQL to investigate and fix data-related issues when needed',
-        'Worked with GitLab for version control and followed structured workflows when contributing code',
+        'Developed and optimized critical features for a comprehensive enterprise system, focusing on financial data tracking, payroll processing, and resource booking modules.',
+        'Partnered closely with cross-functional teams and stakeholders to analyze complex workflows, translating operational requirements into clear technical designs and system documentation',
+        'Took ownership of specific system modules from early stages; actively assisted in project planning, sprint prioritization, status reporting, and risk assessment to ensure on-time delivery.',
+        'Utilized Oracle SQL to investigate data structures, resolve complex data-related issues, and ensure data integrity across interconnected system applications.',
+        'Coordinated and prioritized support tickets, managing direct communication with client stakeholders to explain technical solutions clearly and ensure high-quality service delivery.',
+        'Managed code workflows and version control using GitLab, ensuring reliable deployment and alignment with team-wide architectural standards.',
       ],
     },
   ];
@@ -82,6 +92,13 @@ export class AboutComponent {
       image: 'images/Workearly.png',
       status: 'Completed',
       link: 'https://www.credly.com/badges/f18b4f7b-02f0-4279-82b4-2bb10265b0f6/public_url',
+    },
+    {
+      title: 'Project Management & Administration Certification',
+      issuer: 'TEE',
+      // icon: 'fa-solid fa-spinner',
+      image: 'images/TEE-logo.jpg',
+      // link: 'https://www.credly.com/badges/f18b4f7b-02f0-4279-82b4-2bb10265b0f6/public_url',
     },
     {
       title: 'Certificate of English Proficiency - C2',
@@ -103,14 +120,6 @@ export class AboutComponent {
       title: 'ECDL progress certificate',
       issuer: 'ECDL foundation',
       image: 'images/ecdl-logo.png',
-    },
-    {
-      title: 'Project Management & Administration Certification',
-      issuer: 'In progress (expected June 2026)',
-      icon: 'fa-solid fa-spinner',
-      // image: 'images/Workearly.png',
-      status: 'In progress(expected June 2026)',
-      // link: 'https://www.credly.com/badges/f18b4f7b-02f0-4279-82b4-2bb10265b0f6/public_url',
     },
   ];
 }
