@@ -1,26 +1,32 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgTemplateOutlet } from '@angular/common';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import type {
+  Certification,
+  Education,
+  Experience,
+} from './about.models';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule],
+  imports: [NgTemplateOutlet],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AboutComponent {
-  frontEndDevelopment = [
+  readonly frontEndDevelopment: string[] = [
     'Angular',
     'TypeScript',
     'JavaScript (ES6+)',
     'Tailwind',
     'HTML5',
     'CSS3',
-    'Prime NG',
-    'RxJs',
+    'PrimeNG',
+    'RxJS',
   ];
 
-  apiintegration = [
+  readonly apiIntegration: string[] = [
     'RESTful APIs',
     'Node.js (Express)',
     'Oracle SQL',
@@ -28,16 +34,20 @@ export class AboutComponent {
     'Postman',
   ];
 
-  pmSkills = [
+  readonly pmSkills: string[] = [
     'Agile & Scrum fundamentals',
     'Project Planning & Scheduling',
     'Risk Management',
     'Stakeholder Communication',
   ];
 
-  testingTools = ['Unit Testing (Jasmine, Karma)', 'Git', 'GitHub'];
+  readonly testingTools: string[] = [
+    'Unit Testing (Jasmine, Karma)',
+    'Git',
+    'GitHub',
+  ];
 
-  tools = [
+  readonly tools: string[] = [
     'Microsoft Office',
     'Notion',
     'Kanban boards',
@@ -48,12 +58,12 @@ export class AboutComponent {
     'IntelliJ IDEA',
   ];
 
-  education = [
+  readonly education: Education[] = [
     {
       year: '2015 - 2022',
       type: 'MSc Diploma',
-      degree: 'Information & Commmunication Systems Engineer',
-      university: 'University Of The Aegean',
+      degree: 'Information & Communication Systems Engineer',
+      university: 'University of the Aegean',
       desc: 'Studied Software Engineering with a focus on Object-Oriented Programming languages such as Java, C++, Python etc. Gained experience in web application development, database creation and management with SQL, as well as foundational knowledge in data mining, machine learning, management information systems, and project management.',
       thesis: {
         title:
@@ -63,7 +73,7 @@ export class AboutComponent {
     },
   ];
 
-  experience = [
+  readonly experience: Experience[] = [
     {
       year: '2019',
       role: 'Internship - Technical Support Engineer',
@@ -85,7 +95,7 @@ export class AboutComponent {
     },
   ];
 
-  certifications = [
+  readonly certifications: Certification[] = [
     {
       title: 'Project Management',
       issuer: 'Workearly',
@@ -96,9 +106,7 @@ export class AboutComponent {
     {
       title: 'Project Management & Administration Certification',
       issuer: 'TEE',
-      // icon: 'fa-solid fa-spinner',
       image: 'images/TEE-logo.jpg',
-      // link: 'https://www.credly.com/badges/f18b4f7b-02f0-4279-82b4-2bb10265b0f6/public_url',
     },
     {
       title: 'Certificate of English Proficiency - C2',

@@ -1,12 +1,33 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './features/home/home.component';
-import { AboutComponent } from './features/about/about.component';
-import { ContactComponent } from './features/contact/contact.component';
-import { ProjectsComponent } from './features/projects/projects.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'projects', component: ProjectsComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent },
+  {
+    path: '',
+    loadComponent: () =>
+      import('./features/home/home.component').then(
+        ({ HomeComponent }) => HomeComponent,
+      ),
+  },
+  {
+    path: 'projects',
+    loadComponent: () =>
+      import('./features/projects/projects.component').then(
+        ({ ProjectsComponent }) => ProjectsComponent,
+      ),
+  },
+  {
+    path: 'about',
+    loadComponent: () =>
+      import('./features/about/about.component').then(
+        ({ AboutComponent }) => AboutComponent,
+      ),
+  },
+  {
+    path: 'contact',
+    loadComponent: () =>
+      import('./features/contact/contact.component').then(
+        ({ ContactComponent }) => ContactComponent,
+      ),
+  },
+  { path: '**', redirectTo: '' },
 ];
