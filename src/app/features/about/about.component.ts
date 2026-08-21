@@ -1,50 +1,67 @@
 import { NgTemplateOutlet } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import type {
-  Certification,
-  Education,
-  Experience,
-} from './about.models';
+import type { Certification, Education, Experience } from './about.models';
+import { BackButtonComponent } from '../BackButton/BackButton.component';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [NgTemplateOutlet],
+  imports: [NgTemplateOutlet, BackButtonComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AboutComponent {
-  readonly frontEndDevelopment: string[] = [
-    'Angular',
+  readonly programmingLanguages: string[] = [
     'TypeScript',
     'JavaScript (ES6+)',
-    'Tailwind',
+    'Java',
+    'SQL',
+  ];
+
+  readonly frontEndDevelopment: string[] = [
+    'Angular',
+    'React.js',
+    'RxJS',
+    'NgRx Signals',
     'HTML5',
     'CSS3',
+    'Tailwind CSS',
     'PrimeNG',
-    'RxJS',
   ];
 
   readonly apiIntegration: string[] = [
-    'RESTful APIs',
-    'Node.js (Express)',
+    'Node.js',
+    'Express',
+    'REST APIs',
+    'JSON',
+    'API Integration',
+    'Postman',
     'Oracle SQL',
     'MySQL',
-    'Postman',
+    'MongoDB',
+  ];
+
+  readonly cloudComputing: string[] = [
+    'Docker — basic hands-on exposure',
+    'Git',
+    'GitLab',
+    'GitHub',
   ];
 
   readonly pmSkills: string[] = [
-    'Agile & Scrum fundamentals',
-    'Project Planning & Scheduling',
-    'Risk Management',
+    'Problem Solving',
+    'Team Collaboration',
     'Stakeholder Communication',
+    'Project Management',
+    'Agile and Scrum Fundamentals',
   ];
 
   readonly testingTools: string[] = [
-    'Unit Testing (Jasmine, Karma)',
-    'Git',
-    'GitHub',
+    'Jasmine',
+    'Karma',
+    'Unit Testing',
+    'Functional Testing',
   ];
 
   readonly tools: string[] = [
@@ -61,7 +78,7 @@ export class AboutComponent {
   readonly education: Education[] = [
     {
       year: '2015 - 2022',
-      type: 'MSc Diploma',
+      type: 'Integrated Master’s Degree',
       degree: 'Information & Communication Systems Engineer',
       university: 'University of the Aegean',
       desc: 'Studied Software Engineering with a focus on Object-Oriented Programming languages such as Java, C++, Python etc. Gained experience in web application development, database creation and management with SQL, as well as foundational knowledge in data mining, machine learning, management information systems, and project management.',
@@ -82,15 +99,16 @@ export class AboutComponent {
     },
     {
       year: 'September 2022 - October 2025',
-      role: 'Software Engineer | IT Tech Consultant',
+      role: 'Software Engineer | Front-End Developer, Enterprise Applications',
       company: 'ORCO S.A',
       points: [
-        'Developed and optimized critical features for a comprehensive enterprise system, focusing on financial data tracking, payroll processing, and resource booking modules.',
-        'Partnered closely with cross-functional teams and stakeholders to analyze complex workflows, translating operational requirements into clear technical designs and system documentation',
-        'Took ownership of specific system modules from early stages; actively assisted in project planning, sprint prioritization, status reporting, and risk assessment to ensure on-time delivery.',
-        'Utilized Oracle SQL to investigate data structures, resolve complex data-related issues, and ensure data integrity across interconnected system applications.',
-        'Coordinated and prioritized support tickets, managing direct communication with client stakeholders to explain technical solutions clearly and ensure high-quality service delivery.',
-        'Managed code workflows and version control using GitLab, ensuring reliable deployment and alignment with team-wide architectural standards.',
+        'Developed and maintained enterprise Angular applications supporting business-critical workflows, including patient management, payroll processing, financial tracking, resource management, external unit bookings, and employee leave processes.',
+        'Built reusable Angular components, responsive user interfaces, administrative dashboards, data-entry forms, and validation logic using TypeScript, RxJS, HTML, CSS, and PrimeNG.',
+        'Integrated frontend applications with secure backend REST APIs, working with JSON request and response structures, asynchronous data flows, error handling, and data mapping between frontend components and backend services.',
+        'Used Oracle SQL to query and analyze relational data, investigate production issues, verify application behavior, and identify inconsistencies between stored data and expected system results.',
+        'Analyzed support tickets and user-reported issues, reproduced technical problems, investigated frontend, API, and data-related causes, and supported the implementation and verification of fixes.',
+        'Collaborated with developers, stakeholders, and team members to clarify requirements, understand operational workflows, and deliver application functionality aligned with business needs.',
+        'Participated in code reviews, application maintenance, production support, and the controlled delivery of updates using Git and GitLab.',
       ],
     },
   ];

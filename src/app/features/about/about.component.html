@@ -1,21 +1,35 @@
 <section class="min-h-screen bg-slate-950 text-slate-200 py-20 px-6 pt-32">
   <div class="max-w-4xl mx-auto">
+    <div class="mb-8">
+      <div class="mb-8">
+        <app-back-button />
+      </div>
+    </div>
+
     <div class="mb-12">
-      <h1 class="text-4xl font-bold text-white mb-4">
-        About <span class="text-indigo-500">Me</span>
+      <h1 class="flex flex-col text-white mb-4">
+        <span class="text-4xl font-bold">
+          About <span class="text-indigo-500">Me</span>
+        </span>
+        <span class="text-xl font-normal text-slate-300 mt-4">
+          Software Engineer | Front-End & Full-Stack Developer
+        </span>
       </h1>
       <div class="h-1 w-20 bg-indigo-500 rounded mb-8"></div>
 
-      <div class="space-y-6">
+      <div class="space-y-4">
         <p class="text-xl leading-relaxed text-slate-300">
-          Analytical and results-driven Software Engineer and Project Officer
-          Assistant with three years of professional experience delivering
-          high-quality software solutions in complex healthcare systems. Strong
-          expertise in building single-page applications (SPAs) using Angular,
-          TypeScript, and RxJS, combined with hands-on experience in Agile
-          workflows, requirements gathering, and stakeholder management, while
-          being adept at bridging the gap between technical implementation and
-          business objectives.
+          Software Engineer with over 3 years of professional experience
+          developing and maintaining enterprise web applications using Angular,
+          TypeScript, JavaScript, REST APIs, and Oracle SQL. Experienced in
+          building reusable interfaces, integrating frontend applications with
+          backend services, analyzing relational data, and resolving production
+          issues.
+        </p>
+        <p class="text-lg leading-relaxed text-slate-400">
+          Expanding full-stack skills through Node.js, Express, MongoDB, React,
+          and Java, while developing foundational knowledge of cloud computing
+          and containerized application development with Docker.
         </p>
       </div>
     </div>
@@ -115,6 +129,23 @@
       <h3
         class="text-white font-semibold mb-4 uppercase tracking-wider text-sm"
       >
+        Programming Languages
+      </h3>
+      <div class="flex flex-wrap gap-3">
+        @for (lang of programmingLanguages; track lang) {
+          <span
+            class="px-4 py-2 bg-slate-900 border border-slate-800 rounded-lg text-indigo-400 font-medium"
+          >
+            {{ lang }}
+          </span>
+        }
+      </div>
+    </div>
+
+    <div class="pt-4">
+      <h3
+        class="text-white font-semibold mb-4 uppercase tracking-wider text-sm"
+      >
         Front End Development
       </h3>
       <div class="flex flex-wrap gap-3">
@@ -127,14 +158,49 @@
         }
       </div>
     </div>
+
     <div class="pt-4">
       <h3
         class="text-white font-semibold mb-4 uppercase tracking-wider text-sm"
       >
-        API & Backend Integration
+        Backend & APIs
       </h3>
       <div class="flex flex-wrap gap-3">
         @for (skill of apiIntegration; track skill) {
+          <span
+            class="px-4 py-2 bg-slate-900 border border-slate-800 rounded-lg text-indigo-400 font-medium"
+          >
+            {{ skill }}
+          </span>
+        }
+      </div>
+    </div>
+
+    <div class="pt-4">
+      <h3
+        class="text-white font-semibold mb-4 uppercase tracking-wider text-sm"
+      >
+        Cloud & DevOps
+      </h3>
+      <div class="flex flex-wrap gap-3">
+        @for (cloud of cloudComputing; track cloud) {
+          <span
+            class="px-4 py-2 bg-slate-900 border border-slate-800 rounded-lg text-indigo-400 font-medium"
+          >
+            {{ cloud }}
+          </span>
+        }
+      </div>
+    </div>
+
+    <div class="pt-6">
+      <h3
+        class="text-white font-semibold mb-4 uppercase tracking-wider text-sm"
+      >
+        Testing & Version Control
+      </h3>
+      <div class="flex flex-wrap gap-3">
+        @for (skill of testingTools; track skill) {
           <span
             class="px-4 py-2 bg-slate-900 border border-slate-800 rounded-lg text-indigo-400 font-medium"
           >
@@ -152,23 +218,6 @@
       </h3>
       <div class="flex flex-wrap gap-3">
         @for (skill of pmSkills; track skill) {
-          <span
-            class="px-4 py-2 bg-slate-900 border border-slate-800 rounded-lg text-indigo-400 font-medium"
-          >
-            {{ skill }}
-          </span>
-        }
-      </div>
-    </div>
-
-    <div class="pt-6">
-      <h3
-        class="text-white font-semibold mb-4 uppercase tracking-wider text-sm"
-      >
-        Testing & Version Control
-      </h3>
-      <div class="flex flex-wrap gap-3">
-        @for (skill of testingTools; track skill) {
           <span
             class="px-4 py-2 bg-slate-900 border border-slate-800 rounded-lg text-indigo-400 font-medium"
           >
